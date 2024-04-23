@@ -1,0 +1,27 @@
+{
+  "name": "sophiepowersbot",
+  "version": "1.0.0",
+  "description": "Bot for Sophie Powers Discord Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/x2110311x/sophiepowersbot.git"
+  },
+  "author": "x2110311x",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/x2110311x/sophiepowersbot/issues"
+  },
+  "homepage": "https://github.com/x2110311x/sophiepowersbot#readme",
+  "dependencies": {
+    "canvas": "^2.11.2",
+    "discord.js": "^14.14.1",
+    "hex-color-to-color-name": "^1.0.2",
+    "mysql2": "^3.9.7",
+    "sequelize": "^6.37.3"
+  }
+}
