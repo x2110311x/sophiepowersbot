@@ -28,7 +28,6 @@ for (const file of subcommandFolders) {
     try {
         const subcommand = require(`./${file}`);
         subcommands.set(`${file}`, subcommand);
-        console.log(file);
         staffCommand = subcommand.builder(staffCommand);
     } catch (e) {
         console.log('Could not load fun subcommand %s', file);
