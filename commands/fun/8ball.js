@@ -55,7 +55,7 @@ module.exports = {
       )
       .setFooter({ text: `© ${new Date().getFullYear()}  x2110311x`, iconURL: 'https://cdn.discordapp.com/avatars/470691679712706570/42e790b8113e7f21422796db72d652f2.webp?size=1024' });
 
-    await new Promise(resolve => setTimeout(resolve, 3000));
+    await new Promise(resolve => setTimeout(resolve, 4000));
     await interaction.editReply({ embeds: [postShake] });
   }
 };
