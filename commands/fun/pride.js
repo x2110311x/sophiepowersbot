@@ -15,7 +15,7 @@ module.exports = {
         let newNickname = `🌈${oldNickname}🌈`;
         if (newNickname.length > 32) {
             const embedReply = new EmbedBuilder()
-                .setColor(0xEB6123)
+                .setColor(0xFFC800)
                 .setTitle("That's a long nickname you got there")
                 .setDescription("Your nickname is too long! Discord won't let me make you gay.\n Change your nickname and try again")
                 .setFooter({text: oldNickname, iconURL: member.displayAvatarURL()});
@@ -27,7 +27,7 @@ module.exports = {
             } catch (err){
                 if (err instanceof DiscordAPIError) {
                     const embedReply = new EmbedBuilder()
-                    .setColor(0xEB6123)
+                    .setColor(0xFFC800)
                     .setTitle("Uh oh!")
                     .setDescription("I wasn't able to update your nickname.\n Copy the nickname and set it manually!")
                     .setFooter({text: newNickname, iconURL: member.displayAvatarURL()});
@@ -38,8 +38,8 @@ module.exports = {
                 }
             }
             const embedReply = new EmbedBuilder()
-                .setColor(0xEB6123)
-                .setTitle("Salyyy!")
+                .setColor(0xFFC800)
+                .setTitle("Slayyy!")
                 .setDescription("You're lookin' pretty gay there!")
                 .setFooter({text: newNickname, iconURL: member.displayAvatarURL()});
             await interaction.reply({ embeds: [embedReply] });
