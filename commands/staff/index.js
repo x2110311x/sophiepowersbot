@@ -16,7 +16,7 @@ for (const file of subcommandFiles) {
             subcommands.set(`${file}`, subcommand);
             staffCommand = subcommand.builder(staffCommand);
         } catch (e) {
-            console.log('Could not load staff subcommand %s', file);
+            console.error(`Could not load staff subcommand: ${file}`);
             console.error(e);
         }
     }
@@ -30,7 +30,7 @@ for (const file of subcommandFolders) {
         subcommands.set(`${file}`, subcommand);
         staffCommand = subcommand.builder(staffCommand);
     } catch (e) {
-        console.log('Could not load fun subcommand %s', file);
+        console.error(`Could not load staff subcommand: ${file}`);
         console.error(e);
     }
 }

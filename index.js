@@ -18,8 +18,9 @@ for (const file of commandFiles) {
 		const command = require(`./commands/${file}`);
 		client.commands.set(command.data.name, command);
 		client.commandData.push(command.data.toJSON());
+		console.debug(`${file} command registered`);
 	} catch (e) {
-		console.log('Could not load %s', file);
+		console.error(`Could not load command: ${file}`);
 		console.error(e);
 	}
 }
@@ -35,6 +36,7 @@ for (const file of eventFiles) {
 	else {
 		client.on(event.name, (...args) => event.execute(...args, client));
 	}
+	console.debug(`${file} event handler was registered`);
 }
 
 client.login(client.config.discord.token);

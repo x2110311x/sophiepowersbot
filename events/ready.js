@@ -13,7 +13,7 @@ module.exports = {
 						body: client.commandData,
 					},
 				);
-				console.log('Successfully registered application commands globally');
+				console.debug('Successfully registered application commands globally');
 			// eslint-disable-next-line brace-style
 			} catch (error) {
 				if (error) console.error(error);
@@ -21,18 +21,18 @@ module.exports = {
 		})();
 		client.guilds.fetch(client.config.discord.guildID).then(guild => {
 			guild.members.fetch().then(() => {
-				console.log('Fetched all guild members');
+				console.debug('Fetched all guild members');
 				client.user.setActivity(`${guild.memberCount} members`, { type: 'WATCHING' });
 			});
 			guild.roles.fetch().then(roles => {
 				client.roles = roles;
 			}).then(() => {	
-				console.log('Role Collection Populated');
+				console.debug('Guild Role collection populated');
 			});
 			guild.channels.fetch().then(channels => {
 				client.guildchannels = channels;
 			}).then(() => {
-				console.log('Channel Collection populated');
+				console.debug('Guild channel collection populated');
 			});
 		});
 	},

@@ -16,8 +16,8 @@ module.exports = {
                           subcommands.set(`${file}`, subcommand);
                           subcommandGroup = subcommand.builder(subcommandGroup);
                       } catch (e) {
-                          console.log('Could not load utility subcommand %s', file);
-                          console.error(e);
+                        console.error(`Could not load utility time subcommand: ${file}`);
+                        console.error(e);
                       }
                   }
               }

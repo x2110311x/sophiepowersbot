@@ -16,7 +16,7 @@ for (const file of subcommandFiles) {
             subcommands.set(`${file}`, subcommand);
             utilityCommand = subcommand.builder(utilityCommand);
         } catch (e) {
-            console.log('Could not load utility subcommand %s', file);
+            console.error(`Could not load utility subcommand: ${file}`);
             console.error(e);
         }
     }
@@ -28,10 +28,9 @@ for (const file of subcommandFolders) {
     try {
         const subcommand = require(`./${file}`);
         subcommands.set(`${file}`, subcommand);
-        console.log(file);
         utilityCommand = subcommand.builder(utilityCommand);
     } catch (e) {
-        console.log('Could not load fun subcommand %s', file);
+        console.error(`Could not load utility subcommand: ${file}`);
         console.error(e);
     }
 }

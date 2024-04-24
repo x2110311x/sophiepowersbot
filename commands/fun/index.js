@@ -16,7 +16,7 @@ for (const file of subcommandFiles) {
             subcommands.set(`${file}`, subcommand);
             funCommand = subcommand.builder(funCommand);
         } catch (e) {
-            console.log('Could not load fun subcommand %s', file);
+            console.error(`Could not load fun subcommand: ${file}`);
             console.error(e);
         }
     }
