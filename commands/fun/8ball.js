@@ -40,6 +40,11 @@ module.exports = {
 
     let question = interaction.options.getString('question');
     let answer = answerList[Math.floor(Math.random() * answerList.length)];
+    if (interaction.member.id == 207129652345438211){
+      if (question.toLowerCase().includes('lezza')){
+        answer = "Absolutely!";
+      }
+    }
 
     const postShake = new EmbedBuilder()
       .setColor(0xd5b052)
